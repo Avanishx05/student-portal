@@ -67,7 +67,16 @@ void deleteProfile()
 
 void viewProfile()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile exists yet.\n";
+        return;
+    }
+    std::cout << "\n--- Profile ---\n";
+    std::cout << "Username: " << currentStudent.username << "\n";
+    std::cout << "Name:     " << currentStudent.fullName << "\n";
+    std::cout << "Course:   " << currentStudent.course << "\n";
+    std::cout << "Year:     " << currentStudent.year << "\n";
 }
 
 void dashboard()
