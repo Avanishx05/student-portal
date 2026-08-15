@@ -31,7 +31,11 @@ bool loggedIn = false;
 
 void login()
 {
-    // TODO: Implement
+    std::string inputUser, inputPass;
+    std::cout << "\nUsername: ";
+    std::cin >> inputUser;
+    std::cout << "Password: ";
+    std::cin >> inputPass;
 }
 
 void createProfile()
