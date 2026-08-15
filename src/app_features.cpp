@@ -62,7 +62,16 @@ void createProfile()
 
 void deleteProfile()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile to delete.\n";
+        return;
+    }
+
+    currentStudent = Student();
+    profileExists = false;
+    loggedIn = false;
+    std::cout << "Profile deleted.\n";
 }
 
 void viewProfile()
