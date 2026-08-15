@@ -181,4 +181,5 @@ void updateSettings()
     {
         std::cout << "No changes made.\n";
     }
-}
+} // scratch note
+// this commit belongs on intended-branch
