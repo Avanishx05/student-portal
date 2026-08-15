@@ -51,7 +51,8 @@ void viewProfile()
 
 void dashboard()
 {
-    // TODO: Implement
+    std::cout << "\n===== Dashboard =====\n";
+    std::cout << "Welcome!\n";
 }
 
 void viewSettings()
