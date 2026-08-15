@@ -39,20 +39,26 @@ void login()
     }
 
     std::string inputUser, inputPass;
-    std::cout << "\nUsername: ";
-    std::cin >> inputUser;
-    std::cout << "Password: ";
-    std::cin >> inputPass;
+    int attempts = 0;
+    const int maxAttempts = 3;
+    while (attempts < maxAttempts)
+    {
+        std::string inputUser, inputPass;
+        std::cout << "\nUsername: ";
+        std::cin >> inputUser;
+        std::cout << "Password: ";
+        std::cin >> inputPass;
 
-    if (inputUser == currentStudent.username && inputPass == currentStudent.password)
-    {
-        loggedIn = true;
-        std::cout << "\nLogin successful. Welcome, " << currentStudent.fullName << "!\n";
+        if (inputUser == currentStudent.username && inputPass == currentStudent.password)
+        {
+            loggedIn = true;
+            std::cout << "\nLogin successful. Welcome, " << currentStudent.fullName << "!\n";
+            return;
+        }
+        attempts++;
+        std::cout << "Incorrect username or password. Attempts left: " << (maxAttempts - attempts) << "\n";
     }
-    else
-    {
-        std::cout << "\nIncorrect username or password.\n";
-    }
+    std::cout << "\nToo many failed attempts. Try again later.\n";
 }
 
 void createProfile()
