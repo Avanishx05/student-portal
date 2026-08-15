@@ -41,6 +41,14 @@ void createProfile()
     std::cin >> currentStudent.username;
     std::cout << "Choose a password: ";
     std::cin >> currentStudent.password;
+
+    std::cin.ignore();
+    std::cout << "Full name: ";
+    std::getline(std::cin, currentStudent.fullName);
+    std::cout << "Course: ";
+    std::getline(std::cin, currentStudent.course);
+    std::cout << "Year: ";
+    std::cin >> currentStudent.year;
 }
 
 void deleteProfile()
