@@ -182,3 +182,4 @@ void updateSettings()
         std::cout << "No changes made.\n";
     }
 } // scratch note
+// important work we don't want to lose
