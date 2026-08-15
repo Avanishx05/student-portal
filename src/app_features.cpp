@@ -128,7 +128,23 @@ void viewProfile()
 
 void dashboard()
 {
-    // TODO: Implement
+    if (!loggedIn)
+    {
+        std::cout << "\nPlease log in first to access the dashboard.\n";
+        return;
+    }
+
+    std::cout << "\n===== Dashboard =====\n";
+
+    std::cout << "Welcome, " << currentStudent.fullName << "!\n";
+    std::cout << "Course: " << currentStudent.course << " | Year: " << currentStudent.year << "\n";
+
+    std::cout << "\nNotifications: " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << "\n";
+
+    std::cout << "\nQuick Links:\n";
+    std::cout << " - View Profile\n";
+    std::cout << " - Settings\n";
+    std::cout << " - Logout\n";
 }
 
 void viewSettings()
