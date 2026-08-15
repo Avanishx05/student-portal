@@ -61,6 +61,11 @@ void dashboard()
 
     std::cout << "Welcome, " << currentStudent.fullName << "!\n";
     std::cout << "Course: " << currentStudent.course << " | Year: " << currentStudent.year << "\n";
+
+    std::cout << "\nQuick Links:\n";
+    std::cout << " - View Profile\n";
+    std::cout << " - Settings\n";
+    std::cout << " - Logout\n";
 }
 
 void viewSettings()
