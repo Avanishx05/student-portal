@@ -31,7 +31,36 @@ bool loggedIn = false;
 
 void login()
 {
-    // TODO: Implement
+    // gaurdrail non created profile
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile found. Please create a profile first.\n";
+        return;
+    }
+
+    std::cout << "\n--- Login ---\n";
+
+    std::string inputUser, inputPass;
+    int attempts = 0;
+    const int maxAttempts = 3;
+    while (attempts < maxAttempts)
+    {
+        std::string inputUser, inputPass;
+        std::cout << "\nUsername: ";
+        std::cin >> inputUser;
+        std::cout << "Password: ";
+        std::cin >> inputPass;
+
+        if (inputUser == currentStudent.username && inputPass == currentStudent.password)
+        {
+            loggedIn = true;
+            std::cout << "\nLogin successful. Welcome, " << currentStudent.fullName << "!\n";
+            return;
+        }
+        attempts++;
+        std::cout << "Incorrect username or password. Attempts left: " << (maxAttempts - attempts) << "\n";
+    }
+    std::cout << "\nToo many failed attempts. Try again later.\n";
 }
 
 void createProfile()
