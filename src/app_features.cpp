@@ -68,5 +68,10 @@ void viewSettings()
 
 void updateSettings()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile exists. Create one first.\n";
+        return;
+    }
+    std::cout << "\n--- Update Settings ---\n";
 }
