@@ -1,7 +1,7 @@
 ## Setup Instructions
 
 ### Prerequisites
-* C++ compiler installed(g++ or clang++).
+* C++ compiler installed(g++ or clang).
 * [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your machine.
 
 
@@ -16,3 +16,6 @@
 
 ### Run Instructions
 * run `./student-portal`
+
+### Debug Instructions
+*If the program does not execute/ compile make sure you check for your g++/clang version and `g++ -- version/ clang --version`
