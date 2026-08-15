@@ -82,5 +82,6 @@ void updateSettings()
     if (choice == 'y' || choice == 'Y')
     {
         currentStudent.notificationsEnabled = !currentStudent.notificationsEnabled;
+        std::cout << "Notifications turned " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << ".\n";
     }
 }
