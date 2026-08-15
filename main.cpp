@@ -1,29 +1,107 @@
+#include "features.h"
 #include <iostream>
-#include <string>
 
-void printWelcomeMessage() {
-    std::cout << "      Welcome to Git !       " << std::endl;
+void profileMenu()
+{
+    int choice;
+    do
+    {
+        std::cout << "\n--- Profile Menu ---\n";
+        std::cout << "1. Create Profile\n";
+        std::cout << "2. View Profile\n";
+        std::cout << "3. Delete Profile\n";
+        std::cout << "0. Back\n";
+        std::cout << "Choose an option: ";
+        std::cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            createProfile();
+            break;
+        case 2:
+            viewProfile();
+            break;
+        case 3:
+            deleteProfile();
+            break;
+        case 0:
+            break;
+        default:
+            std::cout << "Invalid option, try again.\n";
+        }
+    } while (choice != 0);
 }
 
+void settingsMenu()
+{
+    int choice;
+    do
+    {
+        std::cout << "\n--- Settings Menu ---\n";
+        std::cout << "1. View Settings\n";
+        std::cout << "2. Update Settings\n";
+        std::cout << "0. Back\n";
+        std::cout << "Choose an option: ";
+        std::cin >> choice;
 
-void greetUser() {
-    std::cout << "Hello, Developer!" << std::endl;
+        switch (choice)
+        {
+        case 1:
+            viewSettings();
+            break;
+        case 2:
+            updateSettings();
+            break;
+        case 0:
+            break;
+        default:
+            std::cout << "Invalid option, try again.\n";
+        }
+    } while (choice != 0);
 }
 
-int addNumbers(int a, int b) {
-    return a + b;
+void showMainMenu()
+{
+    std::cout << "\n===== Student Portal =====\n";
+    std::cout << "1. Login\n";
+    std::cout << "2. Profile\n";
+    std::cout << "3. Dashboard\n";
+    std::cout << "4. Settings\n";
+    std::cout << "0. Exit\n";
+    std::cout << "Choose an option: ";
 }
 
-int main() {
-    printWelcomeMessage();
-    greetUser();
+int main()
+{
+    int choice;
 
-    int num1 = 5;
-    int num2 = 10;
-    int result = addNumbers(num1, num2);
+    do
+    {
+        showMainMenu();
+        std::cin >> choice;
 
-    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
-    std::cout << "Program finished successfully." << std::endl;
+        switch (choice)
+        {
+        case 1:
+            login();
+            break;
+        case 2:
+            profileMenu();
+            break;
+        case 3:
+            dashboard();
+            break;
+        case 4:
+            settingsMenu();
+            break;
+        case 0:
+            std::cout << "Goodbye!\n";
+            break;
+        default:
+            std::cout << "Invalid option, try again.\n";
+        }
+    } while (choice != 0);
 
     return 0;
 }
