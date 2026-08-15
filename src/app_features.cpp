@@ -36,7 +36,11 @@ void login()
 
 void createProfile()
 {
-    // TODO: Implement
+    std::cout << "\n--- Create Profile ---\n";
+    std::cout << "Choose a username: ";
+    std::cin >> currentStudent.username;
+    std::cout << "Choose a password: ";
+    std::cin >> currentStudent.password;
 }
 
 void deleteProfile()
