@@ -61,6 +61,9 @@ void viewSettings()
         std::cout << "\nNo profile exists. Create one first.\n";
         return;
     }
+
+    std::cout << "\n--- Settings ---\n";
+    std::cout << "Notifications: " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << "\n";
 }
 
 void updateSettings()
