@@ -149,10 +149,36 @@ void dashboard()
 
 void viewSettings()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile exists. Create one first.\n";
+        return;
+    }
+
+    std::cout << "\n--- Settings ---\n";
+    std::cout << "Notifications: " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << "\n";
 }
 
 void updateSettings()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile exists. Create one first.\n";
+        return;
+    }
+    std::cout << "\n--- Update Settings ---\n";
+
+    std::cout << "Toggle notifications (currently "
+              << (currentStudent.notificationsEnabled ? "ON" : "OFF") << ")? (y/n): ";
+    char choice;
+    std::cin >> choice;
+    if (choice == 'y' || choice == 'Y')
+    {
+        currentStudent.notificationsEnabled = !currentStudent.notificationsEnabled;
+        std::cout << "Notifications turned " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << ".\n";
+    }
+    else
+    {
+        std::cout << "No changes made.\n";
+    }
 }
