@@ -74,4 +74,13 @@ void updateSettings()
         return;
     }
     std::cout << "\n--- Update Settings ---\n";
+
+    std::cout << "Toggle notifications (currently "
+              << (currentStudent.notificationsEnabled ? "ON" : "OFF") << ")? (y/n): ";
+    char choice;
+    std::cin >> choice;
+    if (choice == 'y' || choice == 'Y')
+    {
+        currentStudent.notificationsEnabled = !currentStudent.notificationsEnabled;
+    }
 }
