@@ -58,7 +58,6 @@ void dashboard()
     }
 
     std::cout << "\n===== Dashboard =====\n";
-    std::cout << "Welcome!\n";
 
     std::cout << "Welcome, " << currentStudent.fullName << "!\n";
     std::cout << "Course: " << currentStudent.course << " | Year: " << currentStudent.year << "\n";
