@@ -38,6 +38,8 @@ void login()
         return;
     }
 
+    std::cout << "\n--- Login ---\n";
+
     std::string inputUser, inputPass;
     int attempts = 0;
     const int maxAttempts = 3;
