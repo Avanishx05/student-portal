@@ -51,6 +51,12 @@ void viewProfile()
 
 void dashboard()
 {
+    if (!loggedIn)
+    {
+        std::cout << "\nPlease log in first to access the dashboard.\n";
+        return;
+    }
+
     std::cout << "\n===== Dashboard =====\n";
     std::cout << "Welcome!\n";
 }
