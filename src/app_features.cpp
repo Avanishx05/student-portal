@@ -31,6 +31,13 @@ bool loggedIn = false;
 
 void login()
 {
+    // gaurdrail non created profile
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile found. Please create a profile first.\n";
+        return;
+    }
+
     std::string inputUser, inputPass;
     std::cout << "\nUsername: ";
     std::cin >> inputUser;
