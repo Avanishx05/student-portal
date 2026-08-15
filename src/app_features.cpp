@@ -181,9 +181,4 @@ void updateSettings()
     {
         std::cout << "No changes made.\n";
     }
-<<<<<<< HEAD
-}// main branch update to app_features.cpp
-=======
-} // scratch note
-// this commit belongs on intended-branch
->>>>>>> intended-branch
+}
