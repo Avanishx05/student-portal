@@ -181,4 +181,4 @@ void updateSettings()
     {
         std::cout << "No changes made.\n";
     }
-}
+} // scratch note
