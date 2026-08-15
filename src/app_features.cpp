@@ -43,6 +43,16 @@ void login()
     std::cin >> inputUser;
     std::cout << "Password: ";
     std::cin >> inputPass;
+
+    if (inputUser == currentStudent.username && inputPass == currentStudent.password)
+    {
+        loggedIn = true;
+        std::cout << "\nLogin successful. Welcome, " << currentStudent.fullName << "!\n";
+    }
+    else
+    {
+        std::cout << "\nIncorrect username or password.\n";
+    }
 }
 
 void createProfile()
