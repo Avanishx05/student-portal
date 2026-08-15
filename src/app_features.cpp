@@ -67,11 +67,20 @@ void deleteProfile()
         std::cout << "\nNo profile to delete.\n";
         return;
     }
-
-    currentStudent = Student();
-    profileExists = false;
-    loggedIn = false;
-    std::cout << "Profile deleted.\n";
+    std::cout << "\nAre you sure you want to delete your profile? (y/n): ";
+    char confirm;
+    std::cin >> confirm;
+    if (confirm == 'y' || confirm == 'Y')
+    {
+        currentStudent = Student();
+        profileExists = false;
+        loggedIn = false;
+        std::cout << "Profile deleted.\n";
+    }
+    else
+    {
+        std::cout << "Deletion cancelled.\n";
+    }
 }
 
 void viewProfile()
