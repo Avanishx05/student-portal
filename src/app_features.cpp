@@ -65,17 +65,65 @@ void login()
 
 void createProfile()
 {
-    // TODO: Implement
+    if (profileExists)
+    {
+        std::cout << "\nA profile already exists. Delete it first to create a new one.\n";
+        return;
+    }
+
+    std::cout << "\n--- Create Profile ---\n";
+    std::cout << "Choose a username: ";
+    std::cin >> currentStudent.username;
+    std::cout << "Choose a password: ";
+    std::cin >> currentStudent.password;
+
+    std::cin.ignore();
+    std::cout << "Full name: ";
+    std::getline(std::cin, currentStudent.fullName);
+    std::cout << "Course: ";
+    std::getline(std::cin, currentStudent.course);
+    std::cout << "Year: ";
+    std::cin >> currentStudent.year;
+
+    profileExists = true;
+    std::cout << "\nProfile created successfully.\n";
 }
 
 void deleteProfile()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile to delete.\n";
+        return;
+    }
+    std::cout << "\nAre you sure you want to delete your profile? (y/n): ";
+    char confirm;
+    std::cin >> confirm;
+    if (confirm == 'y' || confirm == 'Y')
+    {
+        currentStudent = Student();
+        profileExists = false;
+        loggedIn = false;
+        std::cout << "Profile deleted.\n";
+    }
+    else
+    {
+        std::cout << "Deletion cancelled.\n";
+    }
 }
 
 void viewProfile()
 {
-    // TODO: Implement
+    if (!profileExists)
+    {
+        std::cout << "\nNo profile exists yet.\n";
+        return;
+    }
+    std::cout << "\n--- Profile ---\n";
+    std::cout << "Username: " << currentStudent.username << "\n";
+    std::cout << "Name:     " << currentStudent.fullName << "\n";
+    std::cout << "Course:   " << currentStudent.course << "\n";
+    std::cout << "Year:     " << currentStudent.year << "\n";
 }
 
 void dashboard()
