@@ -7,6 +7,28 @@ Feature options
 -> each feature has mulitple options.
 -> palceholders for current design in place
 */
+
+// Student class is the primary struct to perform all operations.
+class Student
+{
+public:
+    std::string username;
+    std::string password;
+    std::string fullName;
+    std::string course;
+    int year = 0;
+    bool notificationsEnabled = true;
+
+    bool isEmpty() const
+    {
+        return username.empty();
+    }
+};
+
+Student currentStudent;
+bool profileExists = false;
+bool loggedIn = false;
+
 void login()
 {
     // TODO: Implement
