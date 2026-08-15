@@ -11,3 +11,6 @@
 * Connect to github with [ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 * Open your terminal and run `git@github.com:Avanishx05/student-portal.git`.
 * run `cd student-portal`
+
+### Build Instructions
+* run `g++ main.cpp -o student-portal`.
