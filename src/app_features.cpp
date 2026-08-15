@@ -84,4 +84,8 @@ void updateSettings()
         currentStudent.notificationsEnabled = !currentStudent.notificationsEnabled;
         std::cout << "Notifications turned " << (currentStudent.notificationsEnabled ? "ON" : "OFF") << ".\n";
     }
+    else
+    {
+        std::cout << "No changes made.\n";
+    }
 }
