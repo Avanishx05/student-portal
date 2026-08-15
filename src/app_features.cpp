@@ -36,6 +36,12 @@ void login()
 
 void createProfile()
 {
+    if (profileExists)
+    {
+        std::cout << "\nA profile already exists. Delete it first to create a new one.\n";
+        return;
+    }
+
     std::cout << "\n--- Create Profile ---\n";
     std::cout << "Choose a username: ";
     std::cin >> currentStudent.username;
@@ -49,6 +55,9 @@ void createProfile()
     std::getline(std::cin, currentStudent.course);
     std::cout << "Year: ";
     std::cin >> currentStudent.year;
+
+    profileExists = true;
+    std::cout << "\nProfile created successfully.\n";
 }
 
 void deleteProfile()
